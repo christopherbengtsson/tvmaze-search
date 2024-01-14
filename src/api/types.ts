@@ -1,13 +1,3 @@
-import { QueryKey } from '@tanstack/react-query';
-
-export interface GetApi {
-  endpoint: string;
-  queryKey: QueryKey;
-  query?: Record<string, string | number | object | undefined>;
-  enabled?: boolean;
-  onError?: () => void;
-}
-
 export interface Search {
   score: number;
   show: Show;

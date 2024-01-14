@@ -11,6 +11,7 @@ afterEach(() => {
 const axe = configureAxe({
   rules: {
     // color contrast checking doesnt work in a jsdom environment.
+    // Accessability checks could be moved to E2E tests instead, where color contrasts would be included
     'color-contrast': { enabled: false },
   },
 });
