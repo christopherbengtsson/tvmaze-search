@@ -15,7 +15,6 @@
     "prettier:fix": "prettier --write 'src/**/*.{ts,tsx}'"
   },
   "dependencies": {
-    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.4",
     "@mui/material": "^5.15.4",
     "@mui/styled-engine-sc": "^6.0.0-alpha.12",
@@ -54,8 +53,5 @@
     "vite": "^5.0.8",
     "vitest": "^1.2.0",
     "vitest-axe": "^0.1.0"
-  },
-  "msw": {
-    "workerDirectory": "public"
   }
 }
