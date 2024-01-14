@@ -27,7 +27,7 @@ export function List({
   onListItemClick,
   selectedIndex,
 }: ListProps) {
-  if (data.length === 0) {
+  if (data.length === 0 && !isLoading) {
     return <Typography>No results</Typography>;
   }
 

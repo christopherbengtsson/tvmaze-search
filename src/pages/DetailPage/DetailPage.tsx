@@ -7,6 +7,7 @@ import { CastAvatars } from './CastAvatars';
 import type { AxiosResponse } from 'axios';
 import { htmlToString } from '../../utils';
 import { useSnackbar } from 'notistack';
+import { useEffect } from 'react';
 
 const Wrapper = styled.div`
   display: flex;
@@ -45,12 +46,16 @@ export function DetailPage() {
     },
   });
 
-  if (isError && !isPending) {
-    enqueueSnackbar({
-      message: error.message,
-      variant: 'error',
-    });
+  useEffect(() => {
+    if (isError && !isPending) {
+      enqueueSnackbar({
+        message: error.message,
+        variant: 'error',
+      });
+    }
+  }, [enqueueSnackbar, error, isError, isPending]);
 
+  if (isError && !isPending) {
     return null;
   }
 

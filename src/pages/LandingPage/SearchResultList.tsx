@@ -1,7 +1,7 @@
 import { AxiosResponse } from 'axios';
 import { SEARCH_URL, Search, Show, useApi } from '../../api';
 import { DebounceInput, List } from '../../components';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSnackbar } from 'notistack';
 
 interface SearchResultListProps {
@@ -28,6 +28,15 @@ export function SearchResultList({
     enabled: !!searchTerm.length,
   });
 
+  useEffect(() => {
+    if (isError) {
+      enqueueSnackbar({
+        message: error.message,
+        variant: 'error',
+      });
+    }
+  }, [isError, error, enqueueSnackbar]);
+
   const onListItemClick = (
     _event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     index: number,
@@ -36,13 +45,6 @@ export function SearchResultList({
     setSelectedIndex(index);
     handleListItemClick(show);
   };
-
-  if (isError) {
-    enqueueSnackbar({
-      message: error.message,
-      variant: 'error',
-    });
-  }
 
   return (
     <>
