@@ -8,6 +8,7 @@ import type { AxiosResponse } from 'axios';
 import { htmlToString } from '../../utils';
 import { useSnackbar } from 'notistack';
 import { useEffect } from 'react';
+import { ImageWithFallback } from '../../components';
 
 const Wrapper = styled.div`
   display: flex;
@@ -74,7 +75,10 @@ export function DetailPage() {
           {isPending ? (
             <Skeleton variant="rectangular" width="100%" height={250} />
           ) : (
-            <img src={response.data.image?.original} alt={response.data.name} />
+            <ImageWithFallback
+              src={response.data.image?.original}
+              alt={response.data.name}
+            />
           )}
         </Aside>
 

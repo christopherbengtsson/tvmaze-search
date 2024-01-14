@@ -6,3 +6,4 @@ export * from './theme';
 export * from './InfoList';
 export * from './ErrorBoundary';
 export * from './SnackbarProvider';
+export * from './ImageWithFallback';
