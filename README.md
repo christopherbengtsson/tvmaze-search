@@ -41,10 +41,10 @@ Start:
 ## If no time constraints
 
 - Delayed loading
-  - To avoid loading-flickers, I'd like to have implemented a hook that helps loading elements decide whether to display or not.
+  - To avoid loading-flickers, I'd like to have implemented a hook that helps loading elements decide whether to display or not. Something like `const showLoading = useDelayedLoading(isLoading)`.
 - Drawer component (keep it simple dummy)
   - When I visualized the idea in my head I'd thought it could nice thing to have. But in retrospect I should just have kept it simple, if I'd do it again I'd just have `<DetailView />` as a regular route.
 - Slow network
-  - If slow network is detected, we should be loading images
-- Let the user be able to search for more things than just show names
+  - If slow network is detected, we should probably not be loading images
 - Display more details about a show (appending more embedded items in the request)
+- Enable search to not only accept show names, but maybe people

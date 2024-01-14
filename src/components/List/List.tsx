@@ -48,7 +48,11 @@ export function List({
               onClick={(event) => onListItemClick(event, 0, show)}
             >
               <ListItemAvatar>
-                <Avatar alt={show.name} src={show.image?.medium} />
+                <Avatar
+                  imgProps={{ loading: 'lazy' }}
+                  alt={show.name}
+                  src={show.image?.medium}
+                />
               </ListItemAvatar>
 
               <ListItemText
