@@ -48,3 +48,4 @@ Start:
   - If slow network is detected, we should probably not be loading images
 - Display more details about a show (appending more embedded items in the request)
 - Enable search to not only accept show names, but maybe people
+- Show dates and time based on browser locale?

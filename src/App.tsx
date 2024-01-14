@@ -3,11 +3,12 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { DetailPage, LandingPage } from './pages';
 import { Layout, SnackbarProvider, theme } from './components';
-import { IS_DEV } from './constants';
 import { ThemeProvider } from '@mui/material/styles';
 import { useEffect } from 'react';
 import { useNetworkConnection } from './hooks';
 import { enqueueSnackbar } from 'notistack';
+
+const IS_DEV = import.meta.env.MODE === 'development';
 
 export function App() {
   const { isSlowConnection } = useNetworkConnection();

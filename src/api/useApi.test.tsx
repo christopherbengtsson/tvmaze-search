@@ -1,7 +1,7 @@
 import { renderHook, waitFor } from '@testing-library/react';
 import { SEARCH_URL, useApi } from '.';
 import { wrapper } from '../test/utils';
-import { mockSearch } from '../test/mockData/search';
+import { mockSearch } from '../test/mocks/data/search';
 
 describe('useApi', () => {
   it('fetches data', async () => {

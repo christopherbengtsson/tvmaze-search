@@ -17,5 +17,11 @@ describe('utils', () => {
       const input = 'Just a plain string';
       expect(htmlToString(input)).toBe(input);
     });
+
+    it('should decode HTML-encoded strings', () => {
+      const encoded = 'Just a plain string &amp; some encoded stuff';
+      const decoded = 'Just a plain string & some encoded stuff';
+      expect(htmlToString(encoded)).toBe(decoded);
+    });
   });
 });
