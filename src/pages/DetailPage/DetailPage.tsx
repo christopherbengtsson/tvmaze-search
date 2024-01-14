@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { DETAILS_URL, ShowDetails, useApi } from '../../api';
+import { DETAILS_URL, ShowDetails, useGet } from '../../api';
 import { Skeleton, Typography } from '@mui/material';
 import styled from 'styled-components';
 import { InfoCard } from './InfoCard';
@@ -30,7 +30,6 @@ const Aside = styled.aside`
 
 export function DetailPage() {
   const { id } = useParams();
-  const { useGet } = useApi();
   const { enqueueSnackbar } = useSnackbar();
 
   const {

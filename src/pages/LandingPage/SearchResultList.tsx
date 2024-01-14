@@ -1,5 +1,5 @@
 import { AxiosResponse } from 'axios';
-import { SEARCH_URL, Search, Show, useApi } from '../../api';
+import { SEARCH_URL, Search, Show, useGet } from '../../api';
 import { DebounceInput, List } from '../../components';
 import { useEffect, useState } from 'react';
 import { useSnackbar } from 'notistack';
@@ -11,7 +11,6 @@ interface SearchResultListProps {
 export function SearchResultList({
   handleListItemClick,
 }: SearchResultListProps) {
-  const { useGet } = useApi();
   const { enqueueSnackbar } = useSnackbar();
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [searchTerm, setSearchTerm] = useState('');
