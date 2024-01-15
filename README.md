@@ -56,3 +56,4 @@ Navigate to the IP printed under Network when running `npm run dev` on your mobi
 - Enable search to not only accept show names, but maybe people
 - Show dates and time based on browser locale?
 - react-router-dom errorElements for LandingPage and DetailsPage
+- Handle and display error responses, not just axios error messages
