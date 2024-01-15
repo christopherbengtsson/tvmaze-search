@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import { Box, Grid, IconButton, SwipeableDrawer } from '@mui/material';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
+import { Box, Grid, IconButton, SwipeableDrawer } from '@mui/material';
+import { ReactNode } from 'react';
 
 export const DRAWER_TRANSITION = 350;
 

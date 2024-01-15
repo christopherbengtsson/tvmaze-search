@@ -1,14 +1,14 @@
-import { useParams } from 'react-router-dom';
-import { DETAILS_URL, ShowDetails, useGet } from '../../api';
 import { Skeleton, Typography } from '@mui/material';
-import styled from 'styled-components';
-import { InfoCard } from './InfoCard';
-import { CastAvatars } from './CastAvatars';
 import type { AxiosResponse } from 'axios';
-import { htmlToString } from '../../utils';
 import { useSnackbar } from 'notistack';
 import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import styled from 'styled-components';
+import { DETAILS_URL, ShowDetails, useGet } from '../../api';
 import { ImageWithFallback } from '../../components';
+import { htmlToString } from '../../utils';
+import { CastAvatars } from './CastAvatars';
+import { InfoCard } from './InfoCard';
 
 const Wrapper = styled.div`
   display: flex;

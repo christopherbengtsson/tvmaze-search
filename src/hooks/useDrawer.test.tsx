@@ -1,15 +1,9 @@
 import { act, renderHook } from '@testing-library/react';
-import { useDrawer } from './useDrawer';
 import { useParams } from 'react-router-dom';
-
-vi.mock('react-router-dom', () => ({
-  useParams: vi.fn(),
-}));
+import { useDrawer } from './useDrawer';
 
 describe('useDrawer', () => {
   it('initializes drawerOpen as true when id is present', () => {
-    vi.mocked(useParams).mockImplementation(() => ({ id: '123' }));
-
     const { result } = renderHook(() => useDrawer());
     expect(result.current.drawerOpen).toBe(true);
   });

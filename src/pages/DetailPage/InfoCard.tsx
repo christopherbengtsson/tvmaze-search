@@ -6,8 +6,8 @@ import {
   Link,
   Rating,
 } from '@mui/material';
-import { InfoList } from '../../components';
 import { Network, Schedule, ShowDetails, WebChannel } from '../../api';
+import { InfoList } from '../../components';
 
 const toSchedule = ({ time, days }: Schedule) => {
   if (!time.length && !days.length) {
@@ -59,7 +59,7 @@ export function InfoCard({ data }: { data: ShowDetails }) {
           items={[
             {
               term: 'Number of seasons',
-              description: data._embedded.seasons.length.toString(),
+              description: data._embedded?.seasons?.length.toString() ?? '-',
             },
             {
               term: data.network ? 'Network' : 'Web channel',

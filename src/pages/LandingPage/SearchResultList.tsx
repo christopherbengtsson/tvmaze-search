@@ -1,8 +1,8 @@
 import { AxiosResponse } from 'axios';
+import { useSnackbar } from 'notistack';
+import { useEffect, useState } from 'react';
 import { SEARCH_URL, Search, Show, useGet } from '../../api';
 import { DebounceInput, List } from '../../components';
-import { useEffect, useState } from 'react';
-import { useSnackbar } from 'notistack';
 
 interface SearchResultListProps {
   handleListItemClick: (show: Show) => void;

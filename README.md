@@ -30,6 +30,10 @@ Start:
 
     npm run preview
 
+## Run on mobile device
+
+Navigate to the IP printed under Network when running `npm run dev` on your mobile device.
+
 # Notes
 
 ## Decisions
@@ -37,6 +41,8 @@ Start:
 - Checking Network connection
   - In the requirements it says "It has to work on the latest
     versions of Chrome", therefor I'm not having some fallback mechanism for other browsers or older versions of Chrome.
+- MUI
+  - To save a lot of time
 
 ## If no time constraints
 
@@ -49,3 +55,4 @@ Start:
 - Display more details about a show (appending more embedded items in the request)
 - Enable search to not only accept show names, but maybe people
 - Show dates and time based on browser locale?
+- react-router-dom errorElements for LandingPage and DetailsPage

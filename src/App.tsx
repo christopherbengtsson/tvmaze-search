@@ -1,12 +1,12 @@
+import { ThemeProvider } from '@mui/material/styles';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import { DetailPage, LandingPage } from './pages';
-import { Layout, SnackbarProvider, theme } from './components';
-import { ThemeProvider } from '@mui/material/styles';
-import { useEffect } from 'react';
-import { useNetworkConnection } from './hooks';
 import { enqueueSnackbar } from 'notistack';
+import { useEffect } from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { Layout, SnackbarProvider, theme } from './components';
+import { useNetworkConnection } from './hooks';
+import { DetailPage, LandingPage } from './pages';
 
 const IS_DEV = import.meta.env.MODE === 'development';
 

@@ -1,6 +1,6 @@
 import { Mock } from 'vitest';
 import { EffectiveConnectionType, useNetworkConnection } from '.';
-import { renderHook, act } from '../test/utils';
+import { act, renderHook } from '../test/utils';
 
 describe('useNetworkConnection', () => {
   let originalNavigator: typeof navigator;

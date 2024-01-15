@@ -1,7 +1,7 @@
-import { DRAWER_TRANSITION, Drawer } from '../../components';
-import { Show } from '../../api';
-import { useDrawer, useSmallScreen } from '../../hooks';
 import { Outlet, useNavigate } from 'react-router-dom';
+import { Show } from '../../api';
+import { DRAWER_TRANSITION, Drawer } from '../../components';
+import { useDrawer, useSmallScreen } from '../../hooks';
 import { SearchResultList } from './SearchResultList';
 
 export function LandingPage() {

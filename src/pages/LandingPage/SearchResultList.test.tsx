@@ -1,12 +1,12 @@
-import { SearchResultList } from './SearchResultList';
 import {
-  axeValidation,
-  renderWithProviders,
-  fireEvent,
-  screen,
   act,
+  axeValidation,
+  fireEvent,
+  renderWithProviders,
+  screen,
   waitFor,
 } from '../../test/utils';
+import { SearchResultList } from './SearchResultList';
 
 describe('<SearchResultList />', () => {
   beforeEach(() => {

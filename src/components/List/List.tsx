@@ -8,8 +8,8 @@ import {
   Typography,
 } from '@mui/material';
 import { Search, Show } from '../../api';
-import { LoadingList } from './LoadingList';
 import { htmlToString } from '../../utils';
+import { LoadingList } from './LoadingList';
 
 export interface ListProps {
   data: Search[];
